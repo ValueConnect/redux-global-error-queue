@@ -1,3 +1,5 @@
-export * from './src';
-export * as gep from './src';
-export default gep;
+export {
+    globalErrorQueue,
+    dequeueGlobalError,
+    enqueueGlobalError
+} from './src';
