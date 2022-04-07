@@ -1,6 +1,30 @@
 {
     "name": "redux-global-error-queue",
     "version": "1.0.0",
+    "private": true,
+    "homepage": "https://github.com/ValueConnect/redux-global-error-queue",
+    "bugs": {
+        "url": "https://github.com/ValueConnect/redux-global-error-queue/issues",
+        "email": "developers@valueconnect.ca"
+    },
+    "license": "UNLICENSED",
+    "contributors": [
+        {
+            "name": "Ryan Sheppard",
+            "email": "ryan@valueconnect.ca"
+        },
+        {
+            "name": "Marshall Asch",
+            "email": "marshall@valueconnect.ca"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ValueConnect/redux-global-error-queue.git"
+    },
+    "engines": {
+        "node": ">=10.0.0"
+    },
     "scripts": {
         "test": "jest"
     },
