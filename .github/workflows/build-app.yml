@@ -1,0 +1,40 @@
+name: Lint, Test, and Build
+
+on:
+  pull_request: {}
+  push: {}
+
+permissions:
+  contents: read    # This is required for actions/checkout@v2
+jobs:
+
+  lint:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 12.x, 14.x, 16.x, 17.x ]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Using Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run lint
+
+  test:
+     runs-on: ubuntu-latest
+     strategy:
+       matrix:
+         node-version: [ 12.x, 14.x, 16.x, 17.x ]
+     steps:
+       - uses: actions/checkout@v3
+       - name: Using Node ${{ matrix.node-version }}
+         uses: actions/setup-node@v3
+         with:
+           node-version: ${{ matrix.node-version }}
+           cache: 'npm'
+       - run: npm ci
+       - run: npm run test
+

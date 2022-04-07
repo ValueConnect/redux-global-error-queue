@@ -1,0 +1,21 @@
+name: 'Comment On New Issues'
+
+on:
+  issues:
+    types: [opened, reopened]
+
+jobs:
+  leave-comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create comment
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            Welcome! Thanks for making a nice new issue on this project.
+            
+            All of our issues are kept in on the [Jira MA][1] board. 
+            Make sure that you head over there and make the issue there so it can get added to the road map.
+
+            [1]: https://valueconnect.atlassian.net/jira/software/c/projects/MA/issues
