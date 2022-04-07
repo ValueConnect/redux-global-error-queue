@@ -1,8 +1,8 @@
 export {
-    enqueueGlobalError,
-    dequeueGlobalError
-} from './actions/actions.js';
+  enqueueGlobalError,
+  dequeueGlobalError,
+} from './actions/actions';
 
 export {
-    globalErrorQueue
-} from './reducers/reducer.js';
+  globalErrorQueue,
+} from './reducers/reducer';
