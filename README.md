@@ -10,7 +10,7 @@ npm install ValueConnect/redux-global-error-queue
 
 ### Adding reducer to Store
 
-This example uses redux's `createStore()` function to create a store. You should add the `globalErrorQueue` wherever you initalize your reducers.
+This example uses redux's `createStore()` function to create a store. You should add the `globalErrorQueue` wherever you initialize your reducers.
 
 ```javascript
 import {combineReducers, createStore} from 'redux';
@@ -40,7 +40,7 @@ store.dispatch(enqueueGlobalError('There is an error!'));
 import store from 'store.js'; // Your Redux store
 import {dequeueGlobalError} from 'redux-global-error-queue';
 
-store.dispatch(dequeueGlobalError()));
+store.dispatch(dequeueGlobalError());
 ```
 ## Versioning
 
