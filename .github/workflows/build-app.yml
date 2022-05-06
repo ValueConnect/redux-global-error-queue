@@ -1,8 +1,7 @@
 name: Lint, Test, and Build
 
 on:
-  pull_request: {}
-  push: {}
+  - pull_request
 
 permissions:
   contents: read    # This is required for actions/checkout@v2
